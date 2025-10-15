@@ -12,18 +12,19 @@
         nav a:hover { text-decoration: underline; }
         .container { max-width: 1000px; margin: auto; padding: 20px; }
         h1, h2 { color: #800000; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        header h1 { color: white; }
         .caso { margin-bottom: 30px; padding: 15px; border: 1px solid #f0f0f0; }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="imagenes/UAI-logo.png" alt="Logo UAI" style="max-width: 250px; margin: 0 auto; background: none;">
-        [cite_start]<h1>Casos de Uso [cite: 72]</h1>
+        <img src="imagenes/uai.png" alt="Logo UAI" style="max-width: 250px; margin: 0 auto; background: none;">
+        <h1>Casos de Uso</h1>
     </header>
 
     <nav>
-        <a href="index.html">INICIO</a>
+        <a href="./">INICIO</a>
         <a href="agenda.html">AGENDA</a>
         <a href="casos_de_uso.html">CASOS DE USO</a>
         <a href="produccion.html">PRODUCCIÓN CIENTÍFICA</a>
@@ -31,69 +32,69 @@
     </nav>
 
     <div class="container">
-        [cite_start]<p>Se detalla aquí los diferentes casos de uso que se implementan en el banco de pruebas[cite: 73].</p>
+        <p>Se detalla aquí los diferentes casos de uso que se implementan en el banco de pruebas.</p>
 
         <div class="caso">
-            <h2>1. [cite_start]Ataques a PLCs (José Castro Tramontina) [cite: 74]</h2>
-            [cite_start]<p>Se plantea una situación en la que el atacante, luego de un ataque por escalada de privilegios, logra acceder a una red industrial, y por lo tanto puede ver un PLC (Programmable Logic Controller)[cite: 78]. [cite_start]Este tipo de dispositivos se encuentran en el Nivel 1 de la Arquitectura de Purdue[cite: 79].</p>
-            [cite_start]<p>Una vez se ha accedido a la red, se sobreescriben datos almacenados en las direcciones de memoria del PLC, logrando modificar el comportamiento de los actuadores conectados al mismo[cite: 80].</p>
+            <h2>1. Ataques a PLCs (José Castro Tramontina)</h2>
+            <p>Se plantea una situación en la que el atacante, luego de un ataque por escalada de privilegios, logra acceder a una red industrial, y por lo tanto puede ver un PLC (Programmable Logic Controller). Este tipo de dispositivos se encuentran en el Nivel 1 de la Arquitectura de Purdue.</p>
+            <p>Una vez se ha accedido a la red, se sobreescriben datos almacenados en las direcciones de memoria del PLC, logrando modificar el comportamiento de los actuadores conectados al mismo.</p>
             
             <h3>Detalles de la Ejecución:</h3>
-            [cite_start]<p>La primera acción a realizar por el script es la conexión al PLC mediante protocolo Modbus TCP/IP[cite: 81]. [cite_start]Los inputs a ingresar por el usuario serán la dirección IP del PLC y el puerto (Modbus: 502)[cite: 82].</p>
-            [cite_start]<p>Los casos 1, 2, 3 y 4 son ejecutados mediante un mismo script que presenta un menú con opciones[cite: 84]. [cite_start]El caso 5 se presenta en forma separada[cite: 85].</p>
+            <p>La primera acción a realizar por el script es la conexión al PLC mediante protocolo Modbus TCP/IP. Los inputs a ingresar por el usuario serán la dirección IP del PLC y el puerto (Modbus: 502).</p>
+            <p>Los casos 1, 2, 3 y 4 son ejecutados mediante un mismo script que presenta un menú con opciones. El caso 5 se presenta en forma separada.</p>
             
             <h4>Casos Simples (Modificación de Variables):</h4>
             <ul>
-                [cite_start]<li>**Encender Variable Conocida (Caso 1):** El script solicita la dirección de la variable y escribe un “1 lógico”[cite: 86, 87].</li>
-                [cite_start]<li>**Apagar Variable Conocida (Caso 2):** El script solicita la dirección y escribe un “0 lógico”[cite: 88, 89].</li>
-                [cite_start]<li>**Encender Todo (Caso 3):** El script recorre mediante un ciclo `for` todas las direcciones y escribe un “1 lógico”[cite: 90, 91].</li>
-                [cite_start]<li>**Apagar Todo (Caso 4):** El script recorre mediante un ciclo `for` todas las direcciones y escribe un “0 lógico”[cite: 92, 93].</li>
+                <li>Encender Variable Conocida (Caso 1): El script solicita la dirección de la variable y escribe un “1 lógico”.</li>
+                <li>Apagar Variable Conocida (Caso 2): El script solicita la dirección y escribe un “0 lógico”.</li>
+                <li>Encender Todo (Caso 3): El script recorre mediante un ciclo `for` todas las direcciones y escribe un “1 lógico".</li>
+                <li>Apagar Todo (Caso 4): El script recorre mediante un ciclo `for` todas las direcciones y escribe un “0 lógico”.</li>
             </ul>
 
             <h4>Caso Stuxnet/Insider (Caso 5):</h4>
-            [cite_start]<p>Supóngase que el PLC está conectado a un VFD (Variable Frequency Drive) que controla un motor de corriente alterna[cite: 94]. [cite_start]El script (ejecutado automáticamente mediante un USB Autorun que simula un “insider” en la planta) escribirá valores numéricos en los registros de salida del VFD, simulando una alteración del comportamiento esperado del motor[cite: 95, 97].</p>
-            <img src="imagenes/casos_de_uso-img-vfd-plc.png" alt="Diagrama de Control de velocidad de un motor mediante VFD y PLC" style="max-width: 500px;">
-            [cite_start]<p style="font-size: 0.8em;">Fuente: <a href="https://instrumentationtools.com/how-to-control-vfd-with-plc/" target="_blank">https://instrumentationtools.com/how-to-control-vfd-with-plc/</a> [cite: 96]</p>
-            <img src="imagenes/casos_de_uso-img-stuxnet.png" alt="Estrategia de ataque de Stuxnet" style="max-width: 600px;">
+            <p>Supóngase que el PLC está conectado a un VFD (Variable Frequency Drive) que controla un motor de corriente alterna. El script (ejecutado automáticamente mediante un USB Autorun que simula un “insider” en la planta) escribirá valores numéricos en los registros de salida del VFD, simulando una alteración del comportamiento esperado del motor.</p>
+            <img src="imagenes/stuxnet1.png" alt="Diagrama de Control de velocidad de un motor mediante VFD y PLC" style="max-width: 500px;">
+            <p style="font-size: 0.8em;">Fuente: <a href="https://instrumentationtools.com/how-to-control-vfd-with-plc/" target="_blank">https://instrumentationtools.com/how-to-control-vfd-with-plc/</a> </p>
+            <img src="imagenes/stuxnet2.png" alt="Estrategia de ataque de Stuxnet" style="max-width: 600px;">
             [cite_start]<p style="font-size: 0.8em;">Fuente: <a href="https://www.researchgate.net/figure/Attack-strategy-of-Stuxnet_fig5_340331302" target="_blank">https://www.researchgate.net/figure/Attack-strategy-of-Stuxnet_fig5_340331302</a> [cite: 98]</p>
-            <img src="imagenes/casos_de_uso-img-modbus.png" alt="Comparación entre mensajes Modbus RTU y Modbus TCP/IP" style="max-width: 600px;">
+            <img src="imagenes/ADU_modbus.png" alt="Comparación entre mensajes Modbus RTU y Modbus TCP/IP" style="max-width: 600px;">
             [cite_start]<p style="font-size: 0.8em;">Fuente: <a href="https://www.simplymodbus.ca/TCP.htm" target="_blank">https://www.simplymodbus.ca/TCP.htm</a> [cite: 83]</p>
         </div>
 
         <div class="caso">
-            <h2>2. [cite_start]Forensia sobre SCADA (Mallid Dagil) [cite: 75]</h2>
-            [cite_start]<p>El uso de herramientas forenses no solo permiten conocer lo sucedido tras un ataque, sino que además pueden asistir en el monitoreo de los SCADA[cite: 99].</p>
-            [cite_start]<p>El análisis de la memoria RAM y del disco busca entender: [cite: 100]</p>
+            <h2>2. Forensia sobre SCADA (Mallid Dagil)</h2>
+            <p>El uso de herramientas forenses no solo permiten conocer lo sucedido tras un ataque, sino que además pueden asistir en el monitoreo de los SCADA.</p>
+            <p>El análisis de la memoria RAM y del disco busca entender:</p>
             <ul>
-                [cite_start]<li>¿Por dónde ingresó el script? [cite: 101]</li>
-                [cite_start]<li>¿Fecha en la que ingresó? [cite: 102]</li>
-                [cite_start]<li>¿Qué es lo que hace? [cite: 103]</li>
-                [cite_start]<li>Tratar de identificar si el mismo persiste en el disco [cite: 104]</li>
-                [cite_start]<li>Observar el camino que efectúa para llegar al PLC [cite: 105]</li>
+                <li>¿Por dónde ingresó el script?</li>
+                <li>¿Fecha en la que ingresó?</li>
+                <li>¿Qué es lo que hace?</li>
+                <li>Tratar de identificar si el mismo persiste en el disco</li>
+                <li>Observar el camino que efectúa para llegar al PLC</li>
             </ul>
             
             <h3>Metodología:</h3>
             <ul>
-                [cite_start]<li>Realizar captura de memoria ram con herramienta portable[cite: 106].</li>
-                [cite_start]<li>Análisis de la memoria con **Volatility**[cite: 107].</li>
-                [cite_start]<li>Plasmar los resultados en un informe[cite: 108].</li>
-                [cite_start]<li>Realizar una imagen forense en formato **E01**[cite: 109].</li>
-                [cite_start]<li>Análisis de la imagen con **Autopsy**[cite: 110].</li>
-                [cite_start]<li>Plasmar los resultados en un informe[cite: 111].</li>
+                <li>Realizar captura de memoria ram con herramienta portable.</li>
+                <li>Análisis de la memoria con **Volatility**.</li>
+                <li>Plasmar los resultados en un informe.</li>
+                <li>Realizar una imagen forense en formato **E01**.</li>
+                <li>Análisis de la imagen con **Autopsy**.</li>
+                <li>Plasmar los resultados en un informe.</li>
             </ul>
         </div>
 
         <div class="caso">
-            <h2>3. [cite_start]Ciberdefensa Desplegable (Daniel Manrique) [cite: 76]</h2>
-            [cite_start]<p>Construimos un scanner OT portable con interfaz única para descubrir PLCs en campo, inventariarlos y enriquecerlos con vulnerabilidades conocidas (CVE) sin depender de Internet[cite: 112]. [cite_start]La solución integra módulos de descubrimiento activo/pasivo, browsing seguro de variables Modbus, y correlación local con NVD mediante feeds precargados[cite: 113].</p>
-            [cite_start]<p>Reduce el tiempo de alistamiento y el tiempo a información accionable (T0→T1) en escenarios industriales con conectividad limitada, personal mixto (no experto en OT) y ventanas de mantenimiento acotadas[cite: 114].</p>
+            <h2>3. Ciberdefensa Desplegable (Daniel Manrique)</h2>
+            <p>Construimos un scanner OT portable con interfaz única para descubrir PLCs en campo, inventariarlos y enriquecerlos con vulnerabilidades conocidas (CVE) sin depender de Internet. La solución integra módulos de descubrimiento activo/pasivo, browsing seguro de variables Modbus, y correlación local con NVD mediante feeds precargados.</p>
+            <p>Reduce el tiempo de alistamiento y el tiempo a información accionable (T0→T1) en escenarios industriales con conectividad limitada, personal mixto (no experto en OT) y ventanas de mantenimiento acotadas.</p>
             
             <h3>Características Clave:</h3>
             <ul>
-                [cite_start]<li>**Nodo único:** Software liviano para ser desplegado en equipo con cómputo limitado[cite: 115].</li>
-                [cite_start]<li>**Interfaz central:** menú táctil que orquesta scripts y parámetros sin terminal[cite: 116].</li>
-                [cite_start]<li>**Operación offline:** feeds NVD 2.0/1.1 descargados previamente; búsqueda local de CVEs por fabricante/producto[cite: 117].</li>
-                [cite_start]<li>**Modularidad:** incorporación de utilidades de análisis en vivo, análisis de PCAP, mapeo OUI→fabricante y búsquedas OSINT controladas[cite: 118].</li>
+                <li>**Nodo único:** Software liviano para ser desplegado en equipo con cómputo limitado.</li>
+                <li>**Interfaz central:** menú táctil que orquesta scripts y parámetros sin terminal.</li>
+                <li>**Operación offline:** feeds NVD 2.0/1.1 descargados previamente; búsqueda local de CVEs por fabricante/producto.</li>
+                <li>**Modularidad:** incorporación de utilidades de análisis en vivo, análisis de PCAP, mapeo OUI→fabricante y búsquedas OSINT controladas.</li>
             </ul>
             
             <h3>Funciones Destacadas:</h3>
