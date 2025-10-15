@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Portable para Pruebas de Ciberseguridad en SCADA - UAI</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        header { background: #800000; color: white; padding: 10px 0; text-align: center; }
+        nav { display: flex; justify-content: center; background: #c0c0c0; padding: 10px 0; }
+        nav a { color: #800000; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        h1, h2 { color: #800000; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .grid-item { border: 1px solid #ddd; padding: 15px; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="imagenes/UAI-logo.png" alt="Logo UAI" style="max-width: 250px; margin: 0 auto; background: none;">
+        [cite_start]<h1>Banco Portable para Pruebas de Ciberseguridad en SCADA [cite: 1]</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="agenda.html">AGENDA</a>
+        <a href="casos_de_uso.html">CASOS DE USO</a>
+        <a href="produccion.html">PRODUCCIÓN CIENTÍFICA</a>
+        <a href="contacto.html">CONTACTO</a>
+    </nav>
+
+    <div class="container">
+        <h2>Contexto y Proyecto</h2>
+        [cite_start]<p>Los sistemas SCADA son muchas veces usados para automatizar el funcionamiento de infraestructuras críticas y para la producción de bienes con alto valor agregado[cite: 2]. [cite_start]Nuevas exigencias (principalmente propuestas en Industria 4.0) sugieren su interconexión con otros sistemas, e incluso, con Internet, lo cual los expone a ciberatacantes[cite: 3].</p>
+        [cite_start]<p>Ataques recientes a diversos sistemas SCADA sugieren que las soluciones propuestas por la industria, lejos están de resolver la cuestión[cite: 4]. [cite_start]Más aún: frente al aumento en el pedido de conexiones no seguras a los SCADA, más vulnerabilidades quedan expuestas a diario[cite: 5]. [cite_start]Es entonces, la ciberseguridad en SCADA, una necesidad de investigación actual y de importancia global[cite: 6].</p>
+        [cite_start]<p>Desde el Centro de Altos Estudios en Tecnología Informática (CAETI) de la UAI, llevamos 10 años trabajando en este campo[cite: 7]. [cite_start]Necesidades varias de investigación nos llevaron a desarrollar este Banco de pruebas SCADA portable[cite: 8].</p>
+
+        <h2>Características del Banco de Pruebas</h2>
+        <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
+            <ul>
+                [cite_start]<li>Red compuesta por 1 PLC, 1 SCADA Server, 1 SCADA operador/ingeniería[cite: 9].</li>
+                [cite_start]<li>Protocolo: Modbus TCP[cite: 10].</li>
+                [cite_start]<li>PLC extraíble (para cambiar modelos): montado sobre riel DIN[cite: 11].</li>
+                [cite_start]<li>Seguridad eléctrica: Térmica + Disyuntor[cite: 12].</li>
+                [cite_start]<li>Entradas / Salidas conectables[cite: 13].</li>
+                [cite_start]<li>Monitor[cite: 14].</li>
+                [cite_start]<li>Bocas de red disponibles para sniffing y/o ataques[cite: 15].</li>
+            </ul>
+            <img src="imagenes/index-img-hardware.png" alt="Imágenes del Banco de Pruebas SCADA" style="border: 1px solid #ddd;">
+        </div>
+        
+        <h2>Casos de Uso Implementados (Resumen)</h2>
+        [cite_start]<p>Los diferentes casos de uso atienden a la hipótesis de que el atacante ya accedió a la red[cite: 16].</p>
+        <ul>
+            [cite_start]<li>**Ataques a PLCs:** De manera sencilla, puede modificarse los estados de las bobinas y del PLC en general (José Castro Tramontina)[cite: 17].</li>
+            [cite_start]<li>**Forensia sobre SCADA:** El uso de herramientas forenses no solo permiten conocer lo sucedido tras un ataque, sino que además pueden asistir en el monitoreo de los SCADA (Mallid Dagil)[cite: 18].</li>
+            [cite_start]<li>**Ciberdefensa Desplegable:** Partiendo de un acceso autorizado a la red, puede escanearse pasiva y activamente a la red SCADA en búsqueda de vulnerabilidades, entregando una propuesta para su mitigación (Daniel Manrique)[cite: 19].</li>
+            [cite_start]<li>**Criptografía dentro del SCADA (en desarrollo):** Los secretos industriales se presentan explícitos en las comunicaciones, es decir, el cómo se hace[cite: 20]. ¡Y esto viaja sin encriptar! [cite_start]Se está desarrollando la implementación de criptografía dentro de la red, minimizando demoras (Jorge Kamlofsky)[cite: 21].</li>
+        </ul>
+
+        <h2>Reconocimiento</h2>
+        [cite_start]<p>Un paper escrito por un par de investigadores de nuestro grupo de investigación (Gonzalo y Valentina Heinen) obtuvieron el tercer premio en el concurso de trabajos estudiantiles del congreso XV CIITI[cite: 22].</p>
+        [cite_start]<p>Link: <a href="https://uai.edu.ar/ciiti/2025/buenos-aires/ciiti-te/default.asp" target="_blank">https://uai.edu.ar/ciiti/2025/buenos-aires/ciiti-te/default.asp</a> [cite: 23]</p>
+        
+        [cite_start]<h2>Te invitamos a conocernos mejor: [cite: 24]</h2>
+        <ul>
+            [cite_start]<li><a href="agenda.html">Agenda de charlas y demos en la Ekoparty</a> [cite: 25]</li>
+            [cite_start]<li><a href="produccion.html">Antecedentes: Papers Publicados</a> [cite: 26]</li>
+            [cite_start]<li><a href="contacto.html">El equipo: mini-cv / Contacto</a> [cite: 27, 28]</li>
+        </ul>
+    </div>
+</body>
+</html>
