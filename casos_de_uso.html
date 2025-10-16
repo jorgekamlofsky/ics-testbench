@@ -99,28 +99,28 @@
             
             <h3>Funciones Destacadas:</h3>
             <ul>
-                [cite_start]<li>**Descubrimiento de PLCs en red IP:** sondeo TCP de puertos ICS típicos (p. ej., 102/S7, 502/Modbus, 44818/EtherNet/IP) con *threading* y *timeouts* conservadores[cite: 119, 120].</li>
-                [cite_start]<li>**Exploración segura de variables Modbus:** lectura de Coils, Discrete Inputs, Input Registers, Holding Registers en rangos paginados[cite: 121, 122].</li>
-                [cite_start]<li>**Inteligencia de vulnerabilidades offline:** Búsqueda local de CVEs por *vendor/product* sobre feeds locales NVD (ej.: “Siemens”, “Delta”)[cite: 123, 124, 125].</li>
-                [cite_start]<li>**Orquestación guiada:** solicita parámetros (CIDR, producto, rutas de feeds) y ejecuta cada acción[cite: 127].</li>
+                <li>**Descubrimiento de PLCs en red IP:** sondeo TCP de puertos ICS típicos (p. ej., 102/S7, 502/Modbus, 44818/EtherNet/IP) con *threading* y *timeouts* conservadores.</li>
+                <li>**Exploración segura de variables Modbus:** lectura de Coils, Discrete Inputs, Input Registers, Holding Registers en rangos paginados.</li>
+                <li>**Inteligencia de vulnerabilidades offline:** Búsqueda local de CVEs por *vendor/product* sobre feeds locales NVD (ej.: “Siemens”, “Delta”).</li>
+                <li>**Orquestación guiada:** solicita parámetros (CIDR, producto, rutas de feeds) y ejecuta cada acción.</li>
             </ul>
 
             <h4>Ciclo de Despliegue (T0→T1):</h4>
             <ol>
-                [cite_start]<li>**T0—Alistamiento:** conectar Equipo en el puerto SPAN/TAP; cargar feeds NVD locales[cite: 128].</li>
-                [cite_start]<li>**Descubrimiento rápido:** ejecutar “Detección PLC” por segmento /24 para identificar activos OT y servicios ICS abiertos[cite: 129].</li>
-                [cite_start]<li>**Inventario y fingerprinting:** asociar IPs a fabricante/familia y registrar huellas mínimas[cite: 130].</li>
-                [cite_start]<li>**Enriquecimiento de riesgo:** lanzar “Búsqueda NVD local” por *vendor/product* para listar CVEs relevantes sin Internet[cite: 131].</li>
-                <li>**Validación controlada:** leer variables Modbus. [cite_start]Escritura solo con autorización formal[cite: 132, 139].</li>
-                [cite_start]<li>**Exportación:** generar artefactos (JSON/CSV) para reporte ejecutivo[cite: 133].</li>
+                <li>**T0—Alistamiento:** conectar Equipo en el puerto SPAN/TAP; cargar feeds NVD locales[cite: 128].</li>
+                <li>**Descubrimiento rápido:** ejecutar “Detección PLC” por segmento /24 para identificar activos OT y servicios ICS abiertos.</li>
+                <li>**Inventario y fingerprinting:** asociar IPs a fabricante/familia y registrar huellas mínimas.</li>
+                <li>**Enriquecimiento de riesgo:** lanzar “Búsqueda NVD local” por *vendor/product* para listar CVEs relevantes sin Internet.</li>
+                <li>**Validación controlada:** leer variables Modbus. [cite_start]Escritura solo con autorización formal.</li>
+                <li>**Exportación:** generar artefactos (JSON/CSV) para reporte ejecutivo.</li>
             </ol>
         </div>
 
         <div class="caso">
-            <h2>4. [cite_start]Criptografía dentro del SCADA (en desarrollo) (Jorge Kamlofsky) [cite: 77]</h2>
-            [cite_start]<p>Los secretos industriales se presentan explícitos en las comunicaciones, es decir, el cómo se hace[cite: 144]. [cite_start]Las comunicaciones SCADA – PLC en Modbus TCP viajan en claro, lo que ha convertido la encripción en SCADA en un tema de interés de investigación[cite: 145, 146].</p>
-            [cite_start]<p>**Modbus TLS** se propone como una capa de seguridad criptográfica dentro de Modbus TCP[cite: 148]. [cite_start]Sin embargo, se desconoce acerca de implementaciones exitosas[cite: 149].</p>
-            [cite_start]<p>En este proyecto se está tras la implementación de una infraestructura criptográfica basada en Modbus TLS, basándose en la documentación de Modbus TLS y los TFC de Scussolin y Bernardi[cite: 150].</p>
+            <h2>4. Criptografía dentro del SCADA (en desarrollo) (Jorge Kamlofsky)</h2>
+            <p>Los secretos industriales se presentan explícitos en las comunicaciones, es decir, el cómo se hace. Las comunicaciones SCADA – PLC en Modbus TCP viajan en claro, lo que ha convertido la encripción en SCADA en un tema de interés de investigación.</p>
+            <p>**Modbus TLS** se propone como una capa de seguridad criptográfica dentro de Modbus TCP. Sin embargo, se desconoce acerca de implementaciones exitosas.</p>
+            <p>En este proyecto se está tras la implementación de una infraestructura criptográfica basada en Modbus TLS, basándose en la documentación de Modbus TLS y los TFC de Scussolin y Bernardi.</p>
         </div>
     </div>
 </body>
