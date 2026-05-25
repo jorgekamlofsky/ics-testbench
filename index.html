@@ -57,53 +57,28 @@
 
     <nav>
         <a href="./">INICIO</a>
-        <a href="agenda.html">AGENDA</a>
-        <a href="casos_de_uso.html">CASOS DE USO</a>
+        <a href="casos_de_uso.html">CASOS DE ESTUDIO</a>
         <a href="produccion.html">PRODUCCIÓN CIENTÍFICA</a>
         <a href="contacto.html">CONTACTO</a>
     </nav>
     <h2>Inicio</h2>
+    
     <div class="container">
-        <h2>Nuestro Banco de Pruebas OT</h2>
-        <p>Nos dedicamos a la Investigacion. En este espacio mostraremos un banco de pruebas que desarrollamos para nuestras necesidades diversas de pruebas específicas sobre sistemas OT requeridas por los casos de estudio: Ciberseguridad y Ciberdefensa, Forensia, Hacking y Criptografía en OT.</p>
-        <h2>Características del Banco de Pruebas</h2>
-        <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
-            <ul>
-                <li>Red compuesta por 1 PLC, 1 SCADA Server, 1 SCADA operador/ingeniería.</li>
-                <li>Protocolo: Modbus TCP.</li>
-                <li>PLC extraíble (para cambiar modelos): montado sobre riel DIN.</li>
-                <li>Seguridad eléctrica: Térmica + Disyuntor.</li>
-                <li>Entradas / Salidas conectables.</li>
-                <li>Monitor.</li>
-                <li>Bocas de red disponibles para sniffing y/o ataques.</li>
-            </ul>
-            <img src="imagenes/valija.png" alt="Imágenes del Banco de Pruebas SCADA" style="border: 1px solid #ddd;">
-        </div>
-        
-        <h2>Casos de Uso Implementados (Resumen)</h2>
+        <h2>Introducción</h2>
+        <p>Estamos transitando hoy los inicios de una cuarta revolución, llamada Industria 4.0. Se apoya sobre tecnologías digitales disruptivas como ser Inteligencia
+Artificial, Big Data, Impresión 3D, y sobre nuevos protocolos de comunicación. Industria 4.0 propone una interconexión de redes tanto horizontal como vertical, lo que provocaría altísimos
+niveles de eficiencia y eficacia en la producción.</p>
+        <p>Pero integrar a los sistemas de control industrial (ICS según sus siglas en inglés) con otras redes dejaría a los ICS expuestos a vulnerabilidades, pudiéndose
+afectar su funcionamiento. Por otro lado, volver al aislamiento, se contrapone con la propuesta básica de Industria 4.0. Por eso, Industria 4.0 propone requerimientos
+de ciberseguridad para poder lograr sus propósitos.</p>        
+        <p>En este proyecto de estudian aportes y soluciones en búsqueda de mejoras a la ciberseguridad de estas redes.</p>
+        <h2>Implementaciones en curso</h2>
         <p>Los diferentes casos de uso atienden a la hipótesis de que el atacante ya accedió a la red.</p>
         <ul>
-            <li>**Ataques a PLCs:** De manera sencilla, puede modificarse los estados de las bobinas y del PLC en general (José Castro Tramontina).</li>
-            <li>**Forensia sobre SCADA:** El uso de herramientas forenses no solo permiten conocer lo sucedido tras un ataque, sino que además pueden asistir en el monitoreo de los SCADA (Mallid Dagil).</li>
-            <li>**Ciberdefensa Desplegable:** Partiendo de un acceso autorizado a la red, puede escanearse pasiva y activamente a la red SCADA en búsqueda de vulnerabilidades, entregando una propuesta para su mitigación (Daniel Manrique).</li>
-            <li>**Criptografía dentro del SCADA (en desarrollo):** Los secretos industriales se presentan explícitos en las comunicaciones, es decir, el cómo se hace[cite: 20]. ¡Y esto viaja sin encriptar! [cite_start]Se está desarrollando la implementación de criptografía dentro de la red, minimizando demoras (Jorge Kamlofsky).</li>
-        </ul>
-        <h2>Que Actividades Ofrecemos:</h2>
-        <p>Realizaremos Demos acerca de los casos de uso que hoy tenemos en funcionamiento: Ataques a PLCs, Forensia en OT, Ciberdefensa Desplegable. Durante algunas horas conectaremos nuestros equipos al CTF de la Secure OT Village. En ese tiempo invitaremos a los visitantes a hallar y hackear a nuestros PLCs (va a ser divertido). Nuestro trabajo se completará con una charla: “Ciberseguridad en Ambientes Industriales: Desafíos y Aportes” el Viernes a las 14:45hs en la sala C1. Speakers: Jorge Kamlofsky, Daniel Manrique y José Castro Tramontina. Estarán también en nuestro espacio: Jonatan Schmidt, Gonzalo Heinen, Valentina Heinen, Mallid Dagil y Juan Arias Jimenez.</p>
-        <p>Para mas detalles, consultar la <a href="agenda.html">agenda</a></p>        
-        <h2>Contexto y Proyecto</h2>
-        <p>Los sistemas SCADA son muchas veces usados para automatizar el funcionamiento de infraestructuras críticas y para la producción de bienes con alto valor agregado. Nuevas exigencias (principalmente propuestas en Industria 4.0) sugieren su interconexión con otros sistemas, e incluso, con Internet, lo cual los expone a ciberatacantes. Ataques recientes a diversos sistemas SCADA sugieren que las soluciones propuestas por la industria, lejos están de resolver la cuestión. Más aún: frente al aumento en el pedido de conexiones no seguras a los SCADA, más vulnerabilidades quedan expuestas a diario. Es entonces, la ciberseguridad en SCADA, una necesidad de investigación actual y de importancia global.</p>
-        <p>Desde el Centro de Altos Estudios en Tecnología Informática (CAETI) de la UAI, llevamos 10 años trabajando en este campo. Necesidades varias de investigación nos llevaron a desarrollar este Banco de pruebas SCADA portable.</p>
-
-        <h2>Reconocimiento</h2>
-        <p>Un paper escrito por un par de investigadores de nuestro grupo de investigación (Gonzalo y Valentina Heinen) obtuvieron el tercer premio en el concurso de trabajos estudiantiles del congreso XV CIITI.
-        Link: <a href="https://uai.edu.ar/ciiti/2025/buenos-aires/ciiti-te/default.asp" target="_blank">https://uai.edu.ar/ciiti/2025/buenos-aires/ciiti-te/default.asp</a></p>
-        
-        <h2>Te invitamos a conocernos mejor: </h2>
-        <ul>
-            <li><a href="agenda.html">Agenda de charlas y demos en la Ekoparty</a> </li>
-            <li><a href="produccion.html">Antecedentes: Papers Publicados</a></li>
-            <li><a href="contacto.html">El equipo: mini-cv / Contacto</a></li>
+            <li><b>Forensia sobre SCADA:</b> El uso de herramientas forenses no solo permiten conocer lo sucedido tras un ataque, sino que además pueden asistir en el monitoreo de los SCADA.</li>
+            <li><b>Ciberdefensa Desplegable:</b> Partiendo de un acceso autorizado a la red, puede escanearse pasiva y activamente a la red SCADA en búsqueda de vulnerabilidades, entregando una propuesta para su mitigación.</li>
+            <li><b>Criptografía dentro del SCADA (en desarrollo):</b> Los secretos industriales se presentan explícitos en las comunicaciones, es decir, el cómo se hace ¡Y esto viaja sin encriptar! [cite_start]Se está desarrollando la implementación de criptografía dentro de la red, minimizando demoras.</li>
+            <li><b>Ataques a PLCs:</b> De manera sencilla, puede modificarse los estados de las bobinas y del PLC en general.</li>
         </ul>
     </div>
 </body>
