@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casos de Uso del Banco de Pruebas - UAI</title>
+    <title>Casos de Estudio</title>
 
 <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
@@ -54,19 +54,19 @@
 
     <header>
         <img src="imagenes/uai.png" alt="Logo UAI" style="max-width: 250px; margin: 0 auto; background: none;">
-        <h1>Payload Industrial: Explotando PLCs y la Respuesta de Ciberdefensa Desplegable</h1>
+        <h1>Payload Industrial: Casos de Estudio</h1>
     </header>
 
     <nav>
         <a href="./">INICIO</a>
-        <a href="agenda.html">AGENDA</a>
-        <a href="casos_de_uso.html">CASOS DE USO</a>
+        <a href="casos_de_uso.html">CASOS DE ESTUDIO</a>
         <a href="produccion.html">PRODUCCIÓN CIENTÍFICA</a>
         <a href="contacto.html">CONTACTO</a>
     </nav>
-    <h2>Casos de uso</h2>
+    
+    <h2>Casos de Estudio</h2>
     <div class="container">
-        <p>Se detalla aquí los diferentes casos de uso que se implementan en el banco de pruebas.</p>
+        <p>Se detalla aquí los diferentes casos de estudio que estamos abordando.</p>
 
         <div class="caso">
             <h2>1. Ataques a PLCs (José Castro Tramontina)</h2>
@@ -151,11 +151,44 @@
         </div>
 
         <div class="caso">
-            <h2>4. Criptografía dentro del SCADA (en desarrollo) (Jorge Kamlofsky)</h2>
+            <h2>4. Criptografía dentro del SCADA (en desarrollo)</h2>
             <p>Los secretos industriales se presentan explícitos en las comunicaciones, es decir, el cómo se hace. Las comunicaciones SCADA – PLC en Modbus TCP viajan en claro, lo que ha convertido la encripción en SCADA en un tema de interés de investigación.</p>
             <p>**Modbus TLS** se propone como una capa de seguridad criptográfica dentro de Modbus TCP. Sin embargo, se desconoce acerca de implementaciones exitosas.</p>
             <p>En este proyecto se está tras la implementación de una infraestructura criptográfica basada en Modbus TLS, basándose en la documentación de Modbus TLS y los TFC de Scussolin y Bernardi.</p>
         </div>
+
+        <div class="caso">
+            <h2>5. Integración IT/OT (en desarrollo)</h2>
+            <p>La integración de la red de producción con la red corporativa promete mayor eficiencia en los procesos productivos.</p>
+            <p> Pero esta integración expone a las redes industriales (hechas para funcionar aisladamente), a vulnerabilidades provenientes de las redes corporativas, y de Internet. Más aún, en el otro sentido, es posible la filtración de secretos industriales.</p>
+            <p>La integración entre estos niveles, se debe realizar de manera segura incorporando dispositivos que administren el tráfico en ambos sentidos.</p>
+        </div>
+        
+        <div class="caso">
+            <h2>6. Utilización de IA para mejorar la seguridad de los SCADA (en desarrollo)</h2>
+               <ul>
+                <li>**Detección temprana de ransomware:** Si un ransomware se hubiera filtrado en un SCADA, podría identificarse sus acciones de prospección de la red previo a la concresión del ataque (encripción del file system). Se busca lograr ello, entrenando modelos de Aprendizaje Automático para ello.</li>
+                <li>**Firewall inteligente:** Se estudia el desarrollo de un agente basado en modelos de IA que laude el tráfico desde y hacia el SCADA o cualquiera de los terminales de la red de supervisión.</li>
+            </ul>
+        </div>
+
+        
+        <h2>Nuestro Banco de Pruebas OT</h2>
+        <p>Nos dedicamos a la Investigacion. Realizamos un banco de pruebas que desarrollamos para nuestras necesidades diversas de pruebas específicas sobre sistemas OT requeridas por los casos de estudio: Ciberseguridad y Ciberdefensa, Forensia, Hacking y Criptografía en OT.</p>
+        <h2>Características del Banco de Pruebas</h2>
+        <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
+            <ul>
+                <li>Red compuesta por 1 PLC, 1 SCADA Server, 1 SCADA operador/ingeniería.</li>
+                <li>Protocolo: Modbus TCP.</li>
+                <li>PLC extraíble (para cambiar modelos): montado sobre riel DIN.</li>
+                <li>Seguridad eléctrica: Térmica + Disyuntor.</li>
+                <li>Entradas / Salidas conectables.</li>
+                <li>Monitor.</li>
+                <li>Bocas de red disponibles para sniffing y/o ataques.</li>
+            </ul>
+            <img src="imagenes/valija.png" alt="Imágenes del Banco de Pruebas SCADA" style="border: 1px solid #ddd;">
+        </div>
+        
     </div>
 </body>
 </html>
